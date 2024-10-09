@@ -2,10 +2,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { IPredictionData } from "../../interfaces/IPredictionData";
 
 interface Props {
-    data?: {
-        name: number,
-        predição: number
-    }[]
+    data?: IPredictionData[]
 }
 const mockData: IPredictionData[] = [
     {
@@ -37,7 +34,6 @@ const mockData: IPredictionData[] = [
         name: 2030,
         predição: 0
     }
-
 ];
 
 

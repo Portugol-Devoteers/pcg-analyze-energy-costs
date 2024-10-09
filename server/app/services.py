@@ -51,3 +51,19 @@ class EnergyDataService:
             data.append({'name': year, 'predição': round(prediction, 2)})
 
         return 200, data
+
+    def get_top10_renewable(self, df):
+        df_renewables_grouped = df.groupby('country').sum()
+        df_renewables_grouped = df_renewables_grouped.sort_values(by='renewables_consumption', ascending=False).head(10)
+        
+        result = df_renewables_grouped[['solar_consumption', 'wind_consumption', 'hydro_consumption', 'other_renewable_consumption']].reset_index().to_dict(orient='records')
+        
+        for item in result:
+            for key in item.keys():
+                if key != 'country':
+                    item[key] = round(item[key], 2)
+    
+        for item in result:
+            item['name'] = item.pop('country')
+
+        return 200, result

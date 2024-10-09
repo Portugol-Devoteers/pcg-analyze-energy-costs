@@ -8,3 +8,17 @@
         font-family: 'Graduate', sans-serif;
     }
 }
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ececec;
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background:  #424242;
+    border-radius: 3px;
+}
