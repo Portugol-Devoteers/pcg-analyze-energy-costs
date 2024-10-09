@@ -15,7 +15,7 @@ export const Top10RenewableSection = () => {
     }, []);
 
     return (
-        <section className="flex flex-col xl:flex-row gap-1 sm:px-20 items-center">
+        <section className="flex flex-col-reverse xl:flex-row gap-1 sm:px-20 items-center">
 
             <div className="h-full xl:w-1/2 xl:ml-5">
                 <BarCh

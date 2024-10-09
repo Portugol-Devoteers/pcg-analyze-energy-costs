@@ -23,7 +23,7 @@ export const BarCh = ({ data }: Props) => {
         <ResponsiveContainer width="100%" height={400}>
             <BarChart
                 width={500}
-                height={300}
+                height={400}
                 data={data}
                 margin={{
                     top: 20,

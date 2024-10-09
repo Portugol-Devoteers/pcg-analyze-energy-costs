@@ -8,8 +8,8 @@ export const PredictionSection = () => {
     const [predictionData, setPredictionData] = useState<IPredictionData[] | null>(null)
 
     return (
-        <section className="flex flex-col xl:flex-row gap-1 sm:px-20 h-[calc(100vh-126px)] sm:h-[calc(100vh-106px)] items-center">
-            <div className="xl:w-1/2 sm:px-0 px-3 mb-14">
+        <section className="flex flex-col xl:flex-row gap-1 sm:px-20 xl:h-[calc(100vh-126px)] sm:h-[calc(100%-106px)] items-center mb-4">
+            <div className="xl:w-1/2 sm:px-0 px-3">
                 <h1 className="text-4xl sm:text-5xl sm:mb-3 text-center sm:text-left">ENERGY SOME SOME</h1>
                 <div className="sm:text-justify">
                     <p>
