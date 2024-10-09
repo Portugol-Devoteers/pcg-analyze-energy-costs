@@ -1,0 +1,399 @@
+[
+    {
+      "type": "population",
+      "translated_type": "população"
+    },
+    {
+      "type": "gdp",
+      "translated_type": "PIB"
+    },
+    {
+      "type": "fossil_cons_change_pct",
+      "translated_type": "variação percentual do consumo de combustíveis fósseis"
+    },
+    {
+      "type": "fossil_cons_change_twh",
+      "translated_type": "variação do consumo de combustíveis fósseis em TWh"
+    },
+    {
+      "type": "fossil_elec_per_capita",
+      "translated_type": "eletricidade de combustíveis fósseis per capita"
+    },
+    {
+      "type": "fossil_electricity",
+      "translated_type": "eletricidade de combustíveis fósseis"
+    },
+    {
+      "type": "fossil_energy_per_capita",
+      "translated_type": "energia de combustíveis fósseis per capita"
+    },
+    {
+      "type": "fossil_fuel_consumption",
+      "translated_type": "consumo de combustíveis fósseis"
+    },
+    {
+      "type": "fossil_share_elec",
+      "translated_type": "participação dos fósseis na eletricidade"
+    },
+    {
+      "type": "fossil_share_energy",
+      "translated_type": "participação dos fósseis na energia"
+    },
+    {
+      "type": "coal_cons_change_pct",
+      "translated_type": "variação percentual do consumo de carvão"
+    },
+    {
+      "type": "coal_cons_change_twh",
+      "translated_type": "variação do consumo de carvão em TWh"
+    },
+    {
+      "type": "coal_cons_per_capita",
+      "translated_type": "consumo de carvão per capita"
+    },
+    {
+      "type": "coal_consumption",
+      "translated_type": "consumo de carvão"
+    },
+    {
+      "type": "coal_elec_per_capita",
+      "translated_type": "eletricidade de carvão per capita"
+    },
+    {
+      "type": "coal_electricity",
+      "translated_type": "eletricidade de carvão"
+    },
+    {
+      "type": "coal_prod_change_pct",
+      "translated_type": "variação percentual da produção de carvão"
+    },
+    {
+      "type": "coal_prod_change_twh",
+      "translated_type": "variação da produção de carvão em TWh"
+    },
+    {
+      "type": "coal_prod_per_capita",
+      "translated_type": "produção de carvão per capita"
+    },
+    {
+      "type": "coal_production",
+      "translated_type": "produção de carvão"
+    },
+    {
+      "type": "coal_share_elec",
+      "translated_type": "participação do carvão na eletricidade"
+    },
+    {
+      "type": "coal_share_energy",
+      "translated_type": "participação do carvão na energia"
+    },
+    {
+      "type": "oil_cons_change_pct",
+      "translated_type": "variação percentual do consumo de petróleo"
+    },
+    {
+      "type": "oil_cons_change_twh",
+      "translated_type": "variação do consumo de petróleo em TWh"
+    },
+    {
+      "type": "oil_consumption",
+      "translated_type": "consumo de petróleo"
+    },
+    {
+      "type": "oil_elec_per_capita",
+      "translated_type": "eletricidade de petróleo per capita"
+    },
+    {
+      "type": "oil_electricity",
+      "translated_type": "eletricidade de petróleo"
+    },
+    {
+      "type": "oil_energy_per_capita",
+      "translated_type": "energia de petróleo per capita"
+    },
+    {
+      "type": "oil_prod_change_pct",
+      "translated_type": "variação percentual da produção de petróleo"
+    },
+    {
+      "type": "oil_prod_change_twh",
+      "translated_type": "variação da produção de petróleo em TWh"
+    },
+    {
+      "type": "oil_prod_per_capita",
+      "translated_type": "produção de petróleo per capita"
+    },
+    {
+      "type": "oil_production",
+      "translated_type": "produção de petróleo"
+    },
+    {
+      "type": "oil_share_elec",
+      "translated_type": "participação do petróleo na eletricidade"
+    },
+    {
+      "type": "oil_share_energy",
+      "translated_type": "participação do petróleo na energia"
+    },
+    {
+      "type": "gas_cons_change_pct",
+      "translated_type": "variação percentual do consumo de gás"
+    },
+    {
+      "type": "gas_cons_change_twh",
+      "translated_type": "variação do consumo de gás em TWh"
+    },
+    {
+      "type": "gas_consumption",
+      "translated_type": "consumo de gás"
+    },
+    {
+      "type": "gas_elec_per_capita",
+      "translated_type": "eletricidade de gás per capita"
+    },
+    {
+      "type": "gas_electricity",
+      "translated_type": "eletricidade de gás"
+    },
+    {
+      "type": "gas_energy_per_capita",
+      "translated_type": "energia de gás per capita"
+    },
+    {
+      "type": "gas_prod_change_pct",
+      "translated_type": "variação percentual da produção de gás"
+    },
+    {
+      "type": "gas_prod_change_twh",
+      "translated_type": "variação da produção de gás em TWh"
+    },
+    {
+      "type": "gas_prod_per_capita",
+      "translated_type": "produção de gás per capita"
+    },
+    {
+      "type": "gas_production",
+      "translated_type": "produção de gás"
+    },
+    {
+      "type": "gas_share_elec",
+      "translated_type": "participação do gás na eletricidade"
+    },
+    {
+      "type": "gas_share_energy",
+      "translated_type": "participação do gás na energia"
+    },
+    {
+      "type": "nuclear_cons_change_pct",
+      "translated_type": "variação percentual do consumo nuclear"
+    },
+    {
+      "type": "nuclear_cons_change_twh",
+      "translated_type": "variação do consumo nuclear em TWh"
+    },
+    {
+      "type": "nuclear_consumption",
+      "translated_type": "consumo nuclear"
+    },
+    {
+      "type": "nuclear_elec_per_capita",
+      "translated_type": "eletricidade nuclear per capita"
+    },
+    {
+      "type": "nuclear_electricity",
+      "translated_type": "eletricidade nuclear"
+    },
+    {
+      "type": "nuclear_energy_per_capita",
+      "translated_type": "energia nuclear per capita"
+    },
+    {
+      "type": "nuclear_share_elec",
+      "translated_type": "participação da energia nuclear na eletricidade"
+    },
+    {
+      "type": "nuclear_share_energy",
+      "translated_type": "participação da energia nuclear na energia"
+    },
+    {
+      "type": "electricity_generation",
+      "translated_type": "geração de eletricidade"
+    },
+    {
+      "type": "renewables_electricity",
+      "translated_type": "eletricidade de fontes renováveis"
+    },
+    {
+      "type": "renewables_cons_change_pct",
+      "translated_type": "variação percentual do consumo de renováveis"
+    },
+    {
+      "type": "renewables_cons_change_twh",
+      "translated_type": "variação do consumo de renováveis em TWh"
+    },
+    {
+      "type": "renewables_consumption",
+      "translated_type": "consumo de renováveis"
+    },
+    {
+      "type": "renewables_elec_per_capita",
+      "translated_type": "eletricidade de renováveis per capita"
+    },
+    {
+      "type": "renewables_energy_per_capita",
+      "translated_type": "energia de renováveis per capita"
+    },
+    {
+      "type": "renewables_share_elec",
+      "translated_type": "participação dos renováveis na eletricidade"
+    },
+    {
+      "type": "renewables_share_energy",
+      "translated_type": "participação dos renováveis na energia"
+    },
+    {
+      "type": "solar_cons_change_pct",
+      "translated_type": "variação percentual do consumo solar"
+    },
+    {
+      "type": "solar_cons_change_twh",
+      "translated_type": "variação do consumo solar em TWh"
+    },
+    {
+      "type": "solar_consumption",
+      "translated_type": "consumo solar"
+    },
+    {
+      "type": "solar_elec_per_capita",
+      "translated_type": "eletricidade solar per capita"
+    },
+    {
+      "type": "solar_electricity",
+      "translated_type": "eletricidade solar"
+    },
+    {
+      "type": "solar_energy_per_capita",
+      "translated_type": "energia solar per capita"
+    },
+    {
+      "type": "solar_share_elec",
+      "translated_type": "participação da energia solar na eletricidade"
+    },
+    {
+      "type": "solar_share_energy",
+      "translated_type": "participação da energia solar na energia"
+    },
+    {
+      "type": "wind_cons_change_pct",
+      "translated_type": "variação percentual do consumo eólico"
+    },
+    {
+      "type": "wind_cons_change_twh",
+      "translated_type": "variação do consumo eólico em TWh"
+    },
+    {
+      "type": "wind_consumption",
+      "translated_type": "consumo eólico"
+    },
+    {
+      "type": "wind_elec_per_capita",
+      "translated_type": "eletricidade eólica per capita"
+    },
+    {
+      "type": "wind_electricity",
+      "translated_type": "eletricidade eólica"
+    },
+    {
+      "type": "wind_energy_per_capita",
+      "translated_type": "energia eólica per capita"
+    },
+    {
+      "type": "wind_share_elec",
+      "translated_type": "participação da energia eólica na eletricidade"
+    },
+    {
+      "type": "wind_share_energy",
+      "translated_type": "participação da energia eólica na energia"
+    },
+    {
+      "type": "hydro_cons_change_pct",
+      "translated_type": "variação percentual do consumo hidrelétrico"
+    },
+    {
+      "type": "hydro_cons_change_twh",
+      "translated_type": "variação do consumo hidrelétrico em TWh"
+    },
+    {
+      "type": "hydro_consumption",
+      "translated_type": "consumo hidrelétrico"
+    },
+    {
+      "type": "hydro_elec_per_capita",
+      "translated_type": "eletricidade hidrelétrica per capita"
+    },
+    {
+      "type": "hydro_electricity",
+      "translated_type": "eletricidade hidrelétrica"
+    },
+    {
+      "type": "hydro_energy_per_capita",
+      "translated_type": "energia hidrelétrica per capita"
+    },
+    {
+      "type": "hydro_share_elec",
+      "translated_type": "participação da energia hidrelétrica na eletricidade"
+    },
+    {
+      "type": "hydro_share_energy",
+      "translated_type": "participação da energia hidrelétrica na energia"
+    },
+    {
+      "type": "other_renewable_consumption",
+      "translated_type": "consumo de outras renováveis"
+    },
+    {
+      "type": "other_renewable_electricity",
+      "translated_type": "eletricidade de outras renováveis"
+    },
+    {
+      "type": "other_renewable_exc_biofuel_electricity",
+      "translated_type": "eletricidade de outras renováveis excluindo biocombustíveis"
+    },
+    {
+      "type": "other_renewables_cons_change_pct",
+      "translated_type": "variação percentual do consumo de outras renováveis"
+    },
+    {
+      "type": "other_renewables_cons_change_twh",
+      "translated_type": "variação do consumo de outras renováveis em TWh"
+    },
+    {
+      "type": "other_renewables_elec_per_capita",
+      "translated_type": "eletricidade de outras renováveis per capita"
+    },
+    {
+      "type": "other_renewables_elec_per_capita_exc_biofuel",
+      "translated_type": "eletricidade de outras renováveis per capita excluindo biocombustíveis"
+    },
+    {
+      "type": "other_renewables_energy_per_capita",
+      "translated_type": "energia de outras renováveis per capita"
+    },
+    {
+      "type": "other_renewables_share_elec",
+      "translated_type": "participação de outras renováveis na eletricidade"
+    },
+    {
+      "type": "other_renewables_share_elec_exc_biofuel",
+      "translated_type": "participação de outras renováveis na eletricidade excluindo biocombustíveis"
+    },
+    {
+      "type": "other_renewables_share_energy",
+      "translated_type": "participação de outras renováveis na energia"
+    },
+    {
+      "type": "electricity_generation",
+      "translated_type": "geração de eletricidade"
+    }
+  ]
+  

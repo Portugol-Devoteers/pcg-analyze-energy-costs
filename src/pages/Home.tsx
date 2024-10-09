@@ -1,6 +1,11 @@
+import { PredictionSection } from "../components/Home/PredictionSection"
 
 
 export const Home = () => {
 
-    return <h1>conteudo</h1>
+    return (
+        <main className="mt-[126px] sm:mt-[106px]">
+            <PredictionSection />
+        </main>
+    )
 }

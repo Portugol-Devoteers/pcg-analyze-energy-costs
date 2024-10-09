@@ -7,12 +7,13 @@ export const Router = () => {
         <BrowserRouter>
 
             <Routes>
-                {/* PUBLIC ROUTES */}
                 <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
+                    <Route path="sobre" element={<></>} />
+                    <Route path="powerbi" element={<></>} />
                 </Route>
 
-                <Route path="*" element={<></>} />
+                <Route path="*" element={<h1>Not Found</h1>} />
 
             </Routes>
         </BrowserRouter>

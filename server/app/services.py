@@ -46,8 +46,8 @@ class EnergyDataService:
         
         predictions = model.predict(future_years)
     
-        data = {}
+        data = []
         for year, prediction in zip(future_years['year'], predictions):
-            data[year] = prediction
+            data.append({'name': year, 'predição': round(prediction, 2)})
 
         return 200, data
