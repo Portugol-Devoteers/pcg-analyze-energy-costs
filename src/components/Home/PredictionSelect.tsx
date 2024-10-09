@@ -22,15 +22,20 @@ interface IEnergyType {
 }
 
 export const PredictionSelect = ({ setPredictionData }: Props) => {
-    const [country, setCountry] = useState<string>('')
-    const [years, setYears] = useState<number>(0)
-    const [energyType, setEnergyType] = useState<string>('')
+
+    const [country, setCountry] = useState<string>('');
+    const [years, setYears] = useState<number>(0);
+    const [energyType, setEnergyType] = useState<string>('');
+
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const countries: ICountry[] = allCountries;
     const energyTypes: IEnergyType[] = allEnergyTypes;
 
     const handleSubmitPrediction = (event: FormEvent) => {
         event.preventDefault();
+
+        if(isLoading) return;
 
         if (!country || !years || !energyType) {
             toast.error("Preencha todos os campos!")
@@ -41,16 +46,20 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
             return
         }
 
-        axios.get(`http://localhost:5000/predict/${country}/${energyType}/${years}`).then(response => {
+        setIsLoading(true);
+        
+        axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
             if (response.data.code === 200) {
                 setPredictionData(response.data.data);
                 toast.success("Predição realizada com sucesso!")
             }
-        })
+        }).finally(() => {
+            setIsLoading(false);
+        });
     }
 
     return (
-        <div className="ml-5 mt-3 w-full px-10 flex gap-1 font-sans justify-center items-center lg:flex-row flex-col">
+        <div className="ml-5 mt-3 w-full px-10 flex gap-1 font-sans justify-center items-center flex-col">
             <div className="flex gap-1">
                 <Select
                     className="font-sans placeholder:font-sans"
@@ -88,9 +97,9 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
                 onClick={handleSubmitPrediction}
                 colorScheme='blue'
                 size="sm"
-                className="px-5 lg:mt-0 mt-2 lg:w-auto w-full"
+                className="px-5 lg:mt-0 mt-2 w-full"
             >
-                Processar
+                {isLoading ? "Processando..." : "Processar"}
             </Button>
         </div>
     )
