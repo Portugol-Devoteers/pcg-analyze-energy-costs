@@ -35,7 +35,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
     const handleSubmitPrediction = (event: FormEvent) => {
         event.preventDefault();
 
-        if(isLoading) return;
+        if (isLoading) return;
 
         if (!country || !years || !energyType) {
             toast.error("Preencha todos os campos!")
@@ -47,7 +47,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
         }
 
         setIsLoading(true);
-        
+
         axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
             if (response.data.code === 200) {
                 setPredictionData(response.data.data);
@@ -59,7 +59,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
     }
 
     return (
-        <div className="ml-5 mt-3 w-full px-10 flex gap-1 font-sans justify-center items-center flex-col">
+        <div className="ml-5 mt-3 w-full px-10 flex gap-1 font-sans justify-center items-center flex-col 2xl:flex-row">
             <div className="flex gap-1">
                 <Select
                     className="font-sans placeholder:font-sans"
@@ -97,7 +97,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
                 onClick={handleSubmitPrediction}
                 colorScheme='blue'
                 size="sm"
-                className="px-5 lg:mt-0 mt-2 w-full"
+                className="px-5 lg:mt-0 mt-2 2xl:w-auto w-full"
             >
                 {isLoading ? "Processando..." : "Processar"}
             </Button>
