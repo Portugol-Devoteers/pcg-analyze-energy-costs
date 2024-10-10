@@ -7,7 +7,7 @@ export const Top10RenewableSection = () => {
     const [top10RenewableData, setTop10RenewableData] = useState<any[]>([]);
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:5000/top10_renewable").then(response => {
+        axios.get("http://https://pcg-analyze-energy-costs.onrender.com1:5000/top10_renewable").then(response => {
             if (response.data.code === 200) {
                 setTop10RenewableData(response.data.data);
             }
