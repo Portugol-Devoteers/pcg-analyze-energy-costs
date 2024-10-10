@@ -48,8 +48,8 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
 
         setIsLoading(true);
 
-        axios.get(`https://pcg-analyze-energy-costs.onrender.com/predict/${country}/${energyType}/${years}`).then(response => {
-            // axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
+        // axios.get(`https://pcg-analyze-energy-costs.onrender.com/predict/${country}/${energyType}/${years}`).then(response => {
+        axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
             if (response.data.code === 200) {
                 setPredictionData(response.data.data);
                 toast.success("Predição realizada com sucesso!")
@@ -62,9 +62,12 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
     }
 
     return (
-        <div className="ml-5 mt-3 w-full px-10 flex gap-1 font-sans justify-center items-center flex-col 2xl:flex-row">
+        <div className="xl:ml-5 ml-0 mt-3 w-full px-10 flex gap-1 font-sans justify-center items-center flex-col 2xl:flex-row">
             <div className="flex gap-1">
+                <label htmlFor="country" className='sr-only'>Selecionar país</label>
                 <Select
+                    name="country"
+                    aria-label='Selecionar país'
                     className="font-sans placeholder:font-sans"
                     size="sm"
                     placeholder="Selecione o país"
@@ -76,16 +79,24 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
                         ))
                     }
                 </Select>
+
+                <label htmlFor="years" className='sr-only'>Quantidade de anos para a previsão</label>
                 <Input
                     className="placeholder:font-sans font-sans"
                     size="sm"
                     placeholder="Quantos anos?"
+                    aria-label='Quantidade de anos para a previsão'
                     type="number"
+                    name="years"
                     onChange={(event) => setYears(Number(event.target.value))}
                 />
+
+                <label htmlFor="energyType" className='sr-only'>Tipo de energia</label>
                 <Select
                     className="font-sans placeholder:font-sans"
+                    name="energyType"
                     size="sm"
+                    aria-label='Tipo de energia'
                     placeholder="Selecione o tipo de energia"
                     onChange={(event) => setEnergyType(event.target.value)}
                 >

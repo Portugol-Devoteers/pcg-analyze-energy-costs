@@ -8,7 +8,8 @@ export const Top10RenewableSection = () => {
     const [top10RenewableData, setTop10RenewableData] = useState<ITop10RenewableData[]>([]);
 
     useEffect(() => {
-        axios.get("https://pcg-analyze-energy-costs.onrender.com/top10_renewable").then(response => {
+        axios.get("http://127.0.0.1:5000/top10_renewable").then(response => {
+            // axios.get("https://pcg-analyze-energy-costs.onrender.com/top10_renewable").then(response => {
             if (response.data.code === 200) {
                 setTop10RenewableData(response.data.data);
             }
@@ -22,6 +23,8 @@ export const Top10RenewableSection = () => {
                 <BarCh
                     data={top10RenewableData}
                 />
+                <legend className="text-sm font-sans text-zinc-500">* Gráfico dos 10 países que mais consomem energia renovável.</legend>
+
             </div>
 
             <div className="xl:w-1/2 sm:px-0 px-3 mb-14">

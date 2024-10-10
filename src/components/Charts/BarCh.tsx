@@ -5,12 +5,19 @@ type ITop10Data = ITop10RenewableData | ITop10NonRenewableData;
 
 const mockData: ITop10Data[] = [
     {
-        "name": "Brazil",
-        "hydro_consumption": 20,
-        "other_renewable_consumption": 0,
-        "solar_consumption": 0,
-        "wind_consumption": 0
-    }
+        name: "País 1",
+        Éolica: 400,
+        Hidrelétrica: 240,
+        Outras: 240,
+        Solar: 240
+    },
+    {
+        name: "País 2",
+        Éolica: 300,
+        Hidrelétrica: 139,
+        Outras: 221,
+        Solar: 221
+    },
 ];
 
 interface Props {
