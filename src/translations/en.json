@@ -1,0 +1,74 @@
+{
+    "header": {
+        "about": "About"
+    },
+
+    "home": {
+        "predictionSection": {
+            "tittle": "Title 1 in english",
+            "p1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+            "p2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+            "chart": {
+                "xAxis": "Prediction"
+            }
+        },
+        "predictionSelect": {
+            "error1": "Fill in all fields!",
+            "error2": "The number of years must be greater than 0.",
+            "success": "Prediction made successfully!",
+            "placeholder1": "Select the country",
+            "placeholder2": "How many years?",
+            "placeholder3": "Number of years for the prediction",
+            "placeholder4": "Select the type of energy",
+            "button": "Process",
+            "button.loading": "Processing..."
+        },
+        "top10": {
+            "renewables": {
+                "title": "Top 10 countries with the highest renewable energy production",
+                "p1": "Renewable energy is an energy source that is obtained from natural resources that are naturally replenished, such as sunlight, wind, rain, tides, waves, and geothermal heat.",
+                "p2": "Renewable energy is an alternative to non-renewable energy, which is obtained from finite resources, such as coal, oil, and natural gas.",
+                "chart": {
+                    "legend": "* Graph of the 10 countries that consume the most renewable energy. (TWh)"
+                }
+            },
+            "nonRenewables": {
+                "title": "Top 10 countries with the highest non-renewable energy production",
+                "p1": "Non-renewable energy is an energy source that is obtained from finite resources, such as coal, oil, and natural gas.",
+                "p2": "Non-renewable energy is an alternative to renewable energy, which is obtained from natural resources that are naturally replenished, such as sunlight, wind, rain, tides, waves, and geothermal heat.",
+                "chart": {
+                    "legend": "* Graph of the 10 countries that consume the most non-renewable energy. (TWh)"
+                }
+            },
+            "charts": {
+                "wind_consumption": "Wind",
+                "solar_consumption": "Solar",
+                "hydro_consumption": "Hydroelectric",
+                "other_renewable_consumption": "Others",
+                "coal_consumption": "Coal",
+                "oil_consumption": "Oil",
+                "gas_consumption": "Natural Gas",
+                "nuclear_consumption": "Nuclear"
+            },
+            "countries": {
+                "China": "China",
+                "United States": "United States",
+                "Canada": "Canada",
+                "Brazil": "Brazil",
+                "Russia": "Russia",
+                "Japan": "Japan",
+                "Norway": "Norway",
+                "India": "India",
+                "France": "France",
+                "Sweden": "Sweden",
+                "Germany": "Germany",
+                "United Kingdom": "United Kingdom",
+                "Italy": "Italy"
+            }
+        }
+    },
+
+    "footer": {
+        "copy": "Website developed by students from Unisantos"
+    }
+}

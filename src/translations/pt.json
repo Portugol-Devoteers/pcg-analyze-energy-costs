@@ -1,0 +1,76 @@
+{
+    "header": {
+        "about": "Sobre"
+    },
+
+    
+    "home": {
+        "predictionSection": {
+            "tittle": "Título 1 em português",
+            "p1": "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de texto. Lorem Ipsum é o texto fictício padrão da indústria desde os anos 1500.",
+            "p2": "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de texto. Lorem Ipsum é o texto fictício padrão da indústria desde os anos 1500.",
+            "chart": {
+                "xAxis": "Predição"
+            }
+        },
+        "predictionSelect": {
+            "error1": "Preencha todos os campos!",
+            "error2": "A quantidade de anos deve ser maior que 0.",
+            "success": "Predição realizada com sucesso!",
+            "placeholder1": "Selecione o país",
+            "placeholder2": "Quantos anos?",
+            "placeholder3": "Quantidade de anos para a previsão",
+            "placeholder4": "Selecione o tipo de energia",
+            "button": "Processar",
+            "button.loading": "Processando..."
+        },
+        "top10": {
+            "renewables": {
+                "title": "Top 10 países com maior produção de energia renovável",
+                "p1": "A energia renovável é uma fonte de energia que é obtida de recursos naturais que são naturalmente reabastecidos, como luz solar, vento, chuva, marés, ondas e calor geotérmico.",
+                "p2": "A energia renovável é uma alternativa à energia não renovável, que é obtida de recursos finitos, como carvão, petróleo e gás natural.",
+                "chart": {
+                    "legend": "* Gráfico dos 10 países que mais consomem energia renovável. (TWh)"
+                }
+            },
+            "nonRenewables": {
+                "title": "Top 10 países com maior produção de energia não renovável",
+                "p1": "A energia não renovável é uma fonte de energia que é obtida de recursos finitos, como carvão, petróleo e gás natural.",
+                "p2": "A energia não renovável é uma alternativa à energia renovável, que é obtida de recursos naturais que são naturalmente reabastecidos, como luz solar, vento, chuva, marés, ondas e calor geotérmico.",
+                "chart": {
+                    "legend": "* Gráfico dos 10 países que mais consomem energia não renovável. (TWh)"
+                }
+            },
+            "charts": {
+                "wind_consumption": "Eólica",
+                "solar_consumption": "Solar",
+                "hydro_consumption": "Hidrelétrica",
+                "other_renewable_consumption": "Outras",
+                "coal_consumption": "Carvão",
+                "oil_consumption": "Óleo",
+                "gas_consumption": "Gás Natural",
+                "nuclear_consumption": "Nuclear"
+            },
+            "countries": {
+                "China": "China",
+                "United States": "Estados Unidos",
+                "Canada": "Canadá",
+                "Brazil": "Brasil",
+                "Russia": "Rússia",
+                "Japan": "Japão",
+                "Norway": "Noruega",
+                "India": "Índia",
+                "France": "França",
+                "Sweden": "Suécia",
+                "Germany": "Alemanha",
+                "United Kingdom": "Reino Unido",
+                "Italy": "Itália"
+            }
+        }
+    },
+
+
+    "footer": {
+        "copy": "Website desenvolvido por alunos da Unisantos"
+    }
+}

@@ -1,5 +1,6 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { IPredictionData } from "../../interfaces/IPredictionData";
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     data?: IPredictionData[]
@@ -39,6 +40,8 @@ const mockData: IPredictionData[] = [
 
 export const LineArea = ({ data }: Props) => {
     if (!data) data = mockData
+    const { t } = useTranslation();
+
     return (
         <ResponsiveContainer className="mt-2 xl:mt-56" width="100%" height={"50%"}>
             <LineChart
@@ -57,7 +60,13 @@ export const LineArea = ({ data }: Props) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="predição" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line
+                    type="monotone"
+                    dataKey="predição"
+                    name={t("home.predictionSection.chart.xAxis")}
+                    stroke="#8884d8"
+                    activeDot={{ r: 8 }}
+                />
             </LineChart>
         </ResponsiveContainer>
 

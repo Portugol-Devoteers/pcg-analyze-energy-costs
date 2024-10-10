@@ -65,10 +65,10 @@ class EnergyDataService:
     
         for item in result:
             item['name'] = item.pop('country')
-            item['Solar'] = item.pop('solar_consumption')
-            item['Eólica'] = item.pop('wind_consumption')
-            item['Hidrelétrica'] = item.pop('hydro_consumption')
-            item['Outras'] = item.pop('other_renewable_consumption')
+            # item['Solar'] = item.pop('solar_consumption')
+            # item['Eólica'] = item.pop('wind_consumption')
+            # item['Hidrelétrica'] = item.pop('hydro_consumption')
+            # item['Outras'] = item.pop('other_renewable_consumption')
 
         return 200, result
     
@@ -85,9 +85,9 @@ class EnergyDataService:
     
         for item in result:
             item['name'] = item.pop('country')
-            item['Carvão'] = item.pop('coal_consumption')
-            item['Óleo'] = item.pop('oil_consumption')
-            item['Gás'] = item.pop('gas_consumption')
-            item['Nuclear'] = item.pop('nuclear_consumption')
+            # item['Carvão'] = item.pop('coal_consumption')
+            # item['Óleo'] = item.pop('oil_consumption')
+            # item['Gás'] = item.pop('gas_consumption')
+            # item['Nuclear'] = item.pop('nuclear_consumption')
 
         return 200, result

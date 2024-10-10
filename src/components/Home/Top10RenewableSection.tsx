@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { BarCh } from "../Charts/BarCh";
 import axios from "axios";
-import { ITop10RenewableData } from "../../interfaces/ITop10Data";
+import { ITop10Data } from "../../interfaces/ITop10Data";
+import { useTranslation } from "react-i18next";
 
 export const Top10RenewableSection = () => {
 
-    const [top10RenewableData, setTop10RenewableData] = useState<ITop10RenewableData[]>([]);
+    const [top10RenewableData, setTop10RenewableData] = useState<ITop10Data[]>([]);
+
+    const { t } = useTranslation();
 
     useEffect(() => {
         axios.get("http://127.0.0.1:5000/top10_renewable").then(response => {
@@ -23,20 +26,16 @@ export const Top10RenewableSection = () => {
                 <BarCh
                     data={top10RenewableData}
                 />
-                <legend className="text-sm font-sans text-zinc-500">* Gráfico dos 10 países que mais consomem energia renovável.</legend>
+                <legend className="text-sm font-sans text-zinc-500">{t("home.top10.renewables.chart.legend")}</legend>
 
             </div>
 
             <div className="xl:w-1/2 sm:px-0 px-3 mb-14">
-                <h1 className="text-4xl md:text-5xl sm:mb-3 text-center sm:text-left">Top10 Renováveis</h1>
+                <h1 className="text-4xl md:text-5xl sm:mb-3 text-center sm:text-left">{t("home.top10.renewables.title")}</h1>
                 <div className="sm:text-justify">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p>{t("home.top10.renewables.p1")}</p>
                     <br />
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <p>{t("home.top10.renewables.p2")}</p>
                 </div>
             </div>
 

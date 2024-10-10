@@ -1,41 +1,34 @@
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { ITop10NonRenewableData, ITop10RenewableData } from '../../interfaces/ITop10Data';
-
-type ITop10Data = ITop10RenewableData | ITop10NonRenewableData;
-
-const mockData: ITop10Data[] = [
-    {
-        name: "País 1",
-        Éolica: 400,
-        Hidrelétrica: 240,
-        Outras: 240,
-        Solar: 240
-    },
-    {
-        name: "País 2",
-        Éolica: 300,
-        Hidrelétrica: 139,
-        Outras: 221,
-        Solar: 221
-    },
-];
+import { ITop10Data } from '../../interfaces/ITop10Data';
 
 interface Props {
-    data?: ITop10Data[]
+    data?: ITop10Data[];
 }
 
-const colors = ["#8884d8", "#82ca9d", "#FFA500", "#800080"]
+const colors = ["#8884d8", "#82ca9d", "#FFA500", "#800080"];
 
 export const BarCh = ({ data }: Props) => {
+    const { t } = useTranslation();
+    const [translatedData, setTranslatedData] = useState<ITop10Data[]>([]);
 
-    if (!data) data = mockData
+    useEffect(() => {
+        if (data) {
+            const newData = data.map((d, index) => ({
+                ...d,
+                name: t("home.top10.countries." + (d.name)),
+            }));
+            setTranslatedData(newData);
+        }
+    }, [data, t]);
 
     return (
         <ResponsiveContainer width="100%" height={400}>
             <BarChart
                 width={500}
                 height={400}
-                data={data}
+                data={translatedData}
                 margin={{
                     top: 20,
                     right: 30,
@@ -48,15 +41,21 @@ export const BarCh = ({ data }: Props) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-
                 {
-                    data.length > 0 && Object.keys(data[0]).map((key, index) => {
+                    translatedData.length > 0 && Object.keys(translatedData[0]).map((key, index) => {
                         if (key === "name") return null;
-                        return <Bar key={key} dataKey={key} stackId="a" fill={colors[index]} />
+                        return (
+                            <Bar
+                                key={key}
+                                dataKey={key}
+                                name={t("home.top10.charts." + key)}
+                                stackId="a"
+                                fill={colors[index % colors.length]}
+                            />
+                        );
                     })
                 }
-
             </BarChart>
         </ResponsiveContainer>
     );
-}
+};
