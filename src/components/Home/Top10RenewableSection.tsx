@@ -13,7 +13,7 @@ export const Top10RenewableSection = () => {
 
     useEffect(() => {
         // axios.get("http://127.0.0.1:5000/top10_renewable").then(response => {
-        axios.get(`${API_HOST}/top10_renewable`).then(response => {
+        axios.get(`/top10_renewable`).then(response => {
             if (response.data.code === 200) {
                 setTop10RenewableData(response.data.data);
             }
