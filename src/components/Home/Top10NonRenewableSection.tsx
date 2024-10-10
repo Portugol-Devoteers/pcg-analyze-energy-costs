@@ -11,7 +11,7 @@ export const Top10NonRenewableSection = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        axios.get(`/top10_nonrenewable`).then(response => {
+        axios.get(`/api/top10_nonrenewable`).then(response => {
             // axios.get("http://127.0.0.1:5000/top10_nonrenewable").then(response => {
             if (response.data.code === 200) {
                 setTop10NonRenewableData(response.data.data);
