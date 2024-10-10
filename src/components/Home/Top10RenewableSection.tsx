@@ -3,7 +3,6 @@ import { BarCh } from "../Charts/BarCh";
 import axios from "axios";
 import { ITop10Data } from "../../interfaces/ITop10Data";
 import { useTranslation } from "react-i18next";
-import { API_HOST } from "../..";
 
 export const Top10RenewableSection = () => {
 

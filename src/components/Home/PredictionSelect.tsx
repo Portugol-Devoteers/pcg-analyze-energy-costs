@@ -7,7 +7,6 @@ import { IPredictionData } from '../../interfaces/IPredictionData'
 import allCountries from "../../data/countries.json"
 import allEnergyTypes from "../../data/energy_types.json"
 import { useTranslation } from 'react-i18next'
-import { API_HOST } from '../..'
 
 interface Props {
     setPredictionData: (data: IPredictionData[]) => void
