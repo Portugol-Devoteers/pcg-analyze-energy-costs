@@ -7,6 +7,7 @@ import { IPredictionData } from '../../interfaces/IPredictionData'
 import allCountries from "../../data/countries.json"
 import allEnergyTypes from "../../data/energy_types.json"
 import { useTranslation } from 'react-i18next'
+import { API_HOST } from '../..'
 
 interface Props {
     setPredictionData: (data: IPredictionData[]) => void
@@ -70,7 +71,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
 
         setIsLoading(true);
 
-        axios.get(`https://pcg-analyze-energy-costs.onrender.com/predict/${country}/${energyType}/${years}`).then(response => {
+        axios.get(`${API_HOST}/${country}/${energyType}/${years}`).then(response => {
             // // axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
             if (response.data.code === 200) {
                 setPredictionData(response.data.data);

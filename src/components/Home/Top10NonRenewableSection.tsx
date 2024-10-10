@@ -3,6 +3,7 @@ import { BarCh } from "../Charts/BarCh";
 import axios from "axios";
 import { ITop10Data } from "../../interfaces/ITop10Data";
 import { useTranslation } from "react-i18next";
+import { API_HOST } from "../..";
 
 export const Top10NonRenewableSection = () => {
 
@@ -11,7 +12,7 @@ export const Top10NonRenewableSection = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        axios.get("https://pcg-analyze-energy-costs.onrender.com/top10_nonrenewable").then(response => {
+        axios.get(`${API_HOST}/top10_nonrenewable`).then(response => {
             // axios.get("http://127.0.0.1:5000/top10_nonrenewable").then(response => {
             if (response.data.code === 200) {
                 setTop10NonRenewableData(response.data.data);
