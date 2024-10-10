@@ -48,10 +48,13 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
 
         setIsLoading(true);
 
-        axios.get(`https://pcg-analyze-energy-costs.onrender.com/predict/${country}/${energyType}/${years}`).then(response => {
+        // axios.get(`https://pcg-analyze-energy-costs.onrender.com/predict/${country}/${energyType}/${years}`).then(response => {
+        axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
             if (response.data.code === 200) {
                 setPredictionData(response.data.data);
                 toast.success("Predição realizada com sucesso!")
+            } else {
+                toast.error(response.data.message);
             }
         }).finally(() => {
             setIsLoading(false);
@@ -95,9 +98,8 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
             </div>
             <Button
                 onClick={handleSubmitPrediction}
-                colorScheme='blue'
                 size="sm"
-                className="px-5 lg:mt-0 mt-2 2xl:w-auto w-full"
+                className="px-5 lg:mt-0 mt-2 2xl:w-auto w-full !bg-[#002856] !text-white hover:!bg-[#2a4c72] "
             >
                 {isLoading ? "Processando..." : "Processar"}
             </Button>

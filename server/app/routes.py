@@ -34,14 +34,6 @@ def init_routes(app):
     
     @app.route('/top10_renewable')
     def top10_renewable():
-        # df = energy_service.energy_model.get_renewables_data()
-        # top10 = df.groupby('country')['renewables_consumption'].sum().nlargest(10)
-        # if not top10.empty: 
-        #     return jsonify({
-        #         'code': 200,
-        #         'data': top10.to_dict()
-        #     })
-        # return jsonify({'error': 'Erro ao buscar os dados'}), 500
         df = energy_service.energy_model.df
         code, data = energy_service.get_top10_renewable(df)
 
@@ -50,3 +42,18 @@ def init_routes(app):
                 'code': code,
                 'data': data
             })
+        
+        return jsonify({'message': 'Erro ao buscar dados'}), 500
+    
+    @app.route('/top10_nonrenewable')
+    def top10_nonrenewable():
+        df = energy_service.energy_model.df
+        code, data = energy_service.get_top10_nonrenewable(df)
+
+        if code == 200: 
+            return jsonify({
+                'code': code,
+                'data': data
+            })
+        
+        return jsonify({'message': 'Erro ao buscar dados'}), 500

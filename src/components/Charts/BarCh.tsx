@@ -1,5 +1,7 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { ITop10Data } from '../../interfaces/ITop10Data';
+import { ITop10NonRenewableData, ITop10RenewableData } from '../../interfaces/ITop10Data';
+
+type ITop10Data = ITop10RenewableData | ITop10NonRenewableData;
 
 const mockData: ITop10Data[] = [
     {
@@ -14,6 +16,8 @@ const mockData: ITop10Data[] = [
 interface Props {
     data?: ITop10Data[]
 }
+
+const colors = ["#8884d8", "#82ca9d", "#FFA500", "#800080"]
 
 export const BarCh = ({ data }: Props) => {
 
@@ -37,10 +41,14 @@ export const BarCh = ({ data }: Props) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="hydro_consumption" stackId="a" fill="#8884d8" />
-                <Bar dataKey="other_renewable_consumption" stackId="a" fill="#82ca9d" />
-                <Bar dataKey="solar_consumption" stackId="a" fill="#FFA500" />
-                <Bar dataKey="wind_consumption" stackId="a" fill="#800080" />
+
+                {
+                    data.length > 0 && Object.keys(data[0]).map((key, index) => {
+                        if (key === "name") return null;
+                        return <Bar key={key} dataKey={key} stackId="a" fill={colors[index]} />
+                    })
+                }
+
             </BarChart>
         </ResponsiveContainer>
     );

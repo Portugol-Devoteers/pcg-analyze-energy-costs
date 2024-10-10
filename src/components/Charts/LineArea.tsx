@@ -40,7 +40,7 @@ const mockData: IPredictionData[] = [
 export const LineArea = ({ data }: Props) => {
     if (!data) data = mockData
     return (
-        <ResponsiveContainer className="mt-2 xl:mt-32" width="100%" height={"50%"}>
+        <ResponsiveContainer className="mt-2 xl:mt-56" width="100%" height={"50%"}>
             <LineChart
                 width={600}
                 height={400}

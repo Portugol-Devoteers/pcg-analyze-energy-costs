@@ -9,6 +9,13 @@
     }
 }
 
+* {
+    overflow-x: hidden;
+}
+h1 {
+    overflow: hidden;
+}
+ 
 *::-webkit-scrollbar {
     width: 5px;
 }

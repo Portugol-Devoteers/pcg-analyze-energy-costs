@@ -67,3 +67,19 @@ class EnergyDataService:
             item['name'] = item.pop('country')
 
         return 200, result
+    
+    def get_top10_nonrenewable(self, df):
+        df_non_renewables_grouped = df.groupby('country').sum()
+        df_non_renewables_grouped = df_non_renewables_grouped.sort_values(by='fossil_fuel_consumption', ascending=False).head(10)
+        
+        result = df_non_renewables_grouped[['coal_consumption', 'oil_consumption', 'gas_consumption', 'nuclear_consumption']].reset_index().to_dict(orient='records')
+        
+        for item in result:
+            for key in item.keys():
+                if key != 'country':
+                    item[key] = round(item[key], 2)
+    
+        for item in result:
+            item['name'] = item.pop('country')
+
+        return 200, result
