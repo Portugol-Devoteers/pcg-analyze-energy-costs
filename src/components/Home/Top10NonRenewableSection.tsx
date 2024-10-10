@@ -8,8 +8,8 @@ export const Top10NonRenewableSection = () => {
     const [top10NonRenewableData, setTop10NonRenewableData] = useState<ITop10NonRenewableData[]>([]);
 
     useEffect(() => {
-        // axios.get("https://pcg-analyze-energy-costs.onrender.com/top10_nonrenewable").then(response => {
-        axios.get("http://127.0.0.1:5000/top10_nonrenewable").then(response => {
+        axios.get("https://pcg-analyze-energy-costs.onrender.com/top10_nonrenewable").then(response => {
+            // axios.get("http://127.0.0.1:5000/top10_nonrenewable").then(response => {
             if (response.data.code === 200) {
                 setTop10NonRenewableData(response.data.data);
             }
