@@ -12,7 +12,7 @@ export const Top10RenewableSection = () => {
 
     useEffect(() => {
         // axios.get("http://127.0.0.1:5000/top10_renewable").then(response => {
-        axios.get("https://pcg-analyze-energy-costs.onrender.com/top10_renewable").then(response => {
+        axios.get(`/api/top10_renewable`).then(response => {
             if (response.data.code === 200) {
                 setTop10RenewableData(response.data.data);
             }
