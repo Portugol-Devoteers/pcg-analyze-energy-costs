@@ -60,11 +60,11 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
         if (isLoading) return;
 
         if (!country || !years || !energyType) {
-            toast.error(t("home.predictionSection.error1"));
+            toast.error(t("home.predictionSelect.error1"));
             return
         }
         if (years <= 0) {
-            toast.error(t("home.predictionSection.error2"));
+            toast.error(t("home.predictionSelect.error2"));
             return
         }
 
@@ -74,7 +74,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
             // // axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
             if (response.data.code === 200) {
                 setPredictionData(response.data.data);
-                toast.success(t("home.predictionSection.success"));
+                toast.success(t("home.predictionSelect.success"));
             } else {
                 toast.error(response.data.message);
             }
