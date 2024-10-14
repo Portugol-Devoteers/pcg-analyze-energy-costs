@@ -5,16 +5,22 @@
 
     "home": {
         "predictionSection": {
-            "tittle": "Title 1 in english",
-            "p1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-            "p2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+            "tittle": "Energy Consumption Forecast",
+            "p1": "The forecast chart displays a linear regression that allows the user to select the country, the type of energy data, and the number of years to project consumption from 2022 onwards.",
+            "p2": "Linear regression is a statistical technique used to predict the future behavior of a variable based on historical data. In the case of the presented work, the model identifies a relationship between time (x-axis) and the type of data (y-axis) to provide estimates of how consumption may evolve in the coming years.",
             "chart": {
                 "xAxis": "Prediction"
+            },
+            "transcript": {
+                "title":  "Prediction chart transcript",
+                "nodata": "Insufficient data for this country with this type of energy.",
+                "close": "Close"
             }
         },
         "predictionSelect": {
             "error1": "Fill in all fields!",
             "error2": "The number of years must be greater than 0.",
+            "error3": "Insufficient data for this country with this type of energy.",
             "success": "Prediction made successfully!",
             "placeholder1": "Select the country",
             "placeholder2": "How many years?",
@@ -67,6 +73,48 @@
             }
         }
     },
+
+    "about": {
+        "title1": "About the Work",
+        "p1": "This work was developed by students from the Catholic University of Santos in the Computer Science program. The focus is on the analysis of energy data and the use of prediction and visualization tools to understand the behavior of global energy consumption.",
+        "github": "GitHub Repository",
+        "members": "Members",
+        "tech": {
+            "title": "Technologies Used",
+            "p": "The project was developed using the following technologies:",
+            "react": "JavaScript framework for developing the site interface.",
+            "python": "Language used for data processing and prediction.",
+            "pandas": "Python library for data manipulation.",
+            "powerbi": "Tool for creating interactive dashboards.",
+            "flask": "Used to create the API that processes the data.",
+            "iframe": "Used to embed PowerBI dashboards into the website."
+        },
+        "stages": {
+            "title": "Work Stages"
+            
+        }
+    },
+
+    
+    "powerbi": {
+        "graph1": {
+            "title": "Graph 1: Line",
+            "description": "Shows the evolution of the energy metric over the years for the selected country, with X-axis (years) and Y-axis (metric value)."
+        },
+        "graph2": {
+            "title": "Graph 2: Bars",
+            "description": "Displays the countries in descending order, comparing them by the selected metric."
+        },
+        "graph3": {
+            "title": "Graph 3: Map Bubbles",
+            "description": "Shows the global distribution of the selected metric, with the size of the bubbles indicating the magnitude for each country."
+        },
+        "graph4": {
+            "title": "Graph 4: Doughnut",
+            "description": "Displays the proportion of renewable versus non-renewable energy for the selected country."
+        }
+    },
+      
 
     "footer": {
         "copy": "Website developed by students from Unisantos"

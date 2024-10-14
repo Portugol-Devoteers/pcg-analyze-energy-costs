@@ -6,16 +6,22 @@
     
     "home": {
         "predictionSection": {
-            "tittle": "Título 1 em português",
-            "p1": "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de texto. Lorem Ipsum é o texto fictício padrão da indústria desde os anos 1500.",
-            "p2": "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição de texto. Lorem Ipsum é o texto fictício padrão da indústria desde os anos 1500.",
+            "tittle": "Previsão do Consumo Energético",
+            "p1": "O gráfico de previsão exibe uma regressão linear que permite ao usuário selecionar o país, o tipo de dado energético e o número de anos para projetar o consumo a partir de 2022.",
+            "p2": "A regressão linear é uma técnica estatística utilizada para prever o comportamento futuro de uma variável baseada em dados históricos. No caso do trabalho apresentado, o modelo identifica uma relação entre o tempo (eixo x) e o tipo de dado (eixo y) para fornecer estimativas de como o consumo pode evoluir nos próximos anos.",
             "chart": {
                 "xAxis": "Predição"
+            },
+            "transcript": {
+                "title": "Transcrição de gráfico de predição",
+                "nodata": "Não há dados disponíveis para este país com este tipo de energia.",
+                "close": "Fechar"
             }
         },
         "predictionSelect": {
             "error1": "Preencha todos os campos!",
             "error2": "A quantidade de anos deve ser maior que 0.",
+            "error3": "Dados insuficientes para este país com este tipo de energia.",
             "success": "Predição realizada com sucesso!",
             "placeholder1": "Selecione o país",
             "placeholder2": "Quantos anos?",
@@ -69,6 +75,44 @@
         }
     },
 
+    "about": { 
+        "title1": "Sobre o Trabalho",
+        "p1": "Este trabalho foi desenvolvido por alunos da Universidade Católica de Santos no curso de Ciência da Computação. O foco está na análise de dados energéticos e na utilização de ferramentas de predição e visualização para entender o comportamento do consumo energético global.",
+        "github": "Repositório no GitHub",
+        "members": "Equipe",
+        "tech": {
+            "title": "Tecnologias Utilizadas",
+            "p": "O projeto foi desenvolvido com as seguintes tecnologias:",
+            "react": "Framework JavaScript para desenvolvimento da interface do site.",
+            "python": "Linguagem usada para tratamento de dados e predição.",
+            "pandas": "Biblioteca Python para manipulação de dados.",
+            "powerbi": "Ferramenta de criação de dashboards interativos.",
+            "flask": "Usado para criar a API que processa os dados.",
+            "iframe": "Utilizado para integrar os dashboards do PowerBI ao site."
+        },
+        "stages": {
+            "title": "Etapas do Trabalho"
+        }
+    },
+
+    "powerbi": {
+        "graph1": {
+            "title": "Gráfico 1: Linha",
+            "description": "Mostra a evolução da métrica energética ao longo dos anos para o país selecionado, com eixos X (anos) e Y (valor da métrica)."
+        },
+        "graph2": {
+            "title": "Gráfico 2: Barras",
+            "description": "Exibe os países em ordem decrescente, comparando-os pela métrica selecionada."
+        },
+        "graph3": {
+            "title": "Gráfico 3: Bolhas no Mapa",
+            "description": "Mostra a distribuição global da métrica selecionada, com o tamanho das bolhas indicando a magnitude para cada país."
+        },
+        "graph4": {
+            "title": "Gráfico 4: Rosca",
+            "description": "Exibe a proporção de energia renovável versus não renovável para o país selecionado."
+        }
+    },
 
     "footer": {
         "copy": "Website desenvolvido por alunos da Unisantos"

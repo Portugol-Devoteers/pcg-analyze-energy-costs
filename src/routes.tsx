@@ -2,6 +2,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom"
 import { Home } from "./pages/Home"
 import { Layout } from "./components/Layout"
 import { PowerBi } from "./pages/PowerBi"
+import { About } from "./pages/About"
 
 export const Router = () => {
     return (
@@ -10,7 +11,7 @@ export const Router = () => {
             <Routes>
                 <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
-                    <Route path="sobre" element={<></>} />
+                    <Route path="sobre" element={<About />} />
                     <Route path="powerbi" element={<PowerBi />} />
                 </Route>
 

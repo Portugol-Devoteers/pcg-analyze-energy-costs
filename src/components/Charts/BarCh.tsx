@@ -23,6 +23,8 @@ export const BarCh = ({ data }: Props) => {
         }
     }, [data, t]);
 
+    let color = 0;
+
     return (
         <ResponsiveContainer width="100%" height={400}>
             <BarChart
@@ -50,7 +52,7 @@ export const BarCh = ({ data }: Props) => {
                                 dataKey={key}
                                 name={t("home.top10.charts." + key)}
                                 stackId="a"
-                                fill={colors[index % colors.length]}
+                                fill={colors[color++]}
                             />
                         );
                     })

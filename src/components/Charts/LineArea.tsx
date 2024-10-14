@@ -43,7 +43,7 @@ export const LineArea = ({ data }: Props) => {
     const { t } = useTranslation();
 
     return (
-        <ResponsiveContainer className="mt-2 xl:mt-56" width="100%" height={"50%"}>
+        <ResponsiveContainer width="100%" height={"50%"}>
             <LineChart
                 width={600}
                 height={400}

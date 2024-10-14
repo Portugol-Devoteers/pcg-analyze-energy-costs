@@ -37,6 +37,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
 
     const [curLang, setCurLang] = useState<"pt" | "en">(navigator.language === "pt-BR" ? "pt" : "en");
 
+
     useEffect(() => {
         const lng = navigator.language;
         i18n.changeLanguage(lng);
@@ -71,13 +72,16 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
         setIsLoading(true);
 
         axios.get(`/api/predict/${country}/${energyType}/${years}`).then(response => {
-            // // axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
+            // axios.get(`http://127.0.0.1:5000/predict/${country}/${energyType}/${years}`).then(response => {
             if (response.data.code === 200) {
                 setPredictionData(response.data.data);
                 toast.success(t("home.predictionSelect.success"));
             } else {
-                toast.error(response.data.message);
+                toast.error(t("home.predictionSelect.error3"));
             }
+        }).catch(error => {
+            console.log(error);
+            toast.error(t("home.predictionSelect.error3"));
         }).finally(() => {
             setIsLoading(false);
         });
@@ -130,6 +134,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
                         ))
                     }
                 </Select>
+
             </div>
             <Button
                 onClick={handleSubmitPrediction}
@@ -138,6 +143,7 @@ export const PredictionSelect = ({ setPredictionData }: Props) => {
             >
                 {isLoading ? t("home.predictionSelect.button.loading") : t("home.predictionSelect.button")}
             </Button>
+
         </div>
     )
 }
